@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    font-family: Montserrat, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 21px;
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+h2 {
+    font-size: 1.15rem;
+}
+h3 {
+    margin: 5px;
+    font-size: 1.15rem;
+}
+h6 {
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-container {
+    background-color: rgba(227,227,227,0.75);
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+    color: black;
+    padding: 15px 0 15px;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.card-container .thumbnail {
+    border-radius: 50%;
+    padding: 7px;
+    height: 150px;
+    width: 150px;
+    border: 3px outset rgba(255,255,255,0.65);
+}
+
+.card-section {
+    /*background-color: rgba(220,220,220,0.85);*/
+    border-width: 3px 0px;
+    border-color: rgb(255 255 255 / 50%);
+    border-style: groove;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.card-section ul, .list-inline {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card-section ul li, .list-inline li {
+    border: 1px solid #2D2747;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 7px;
+}
+.rank-item-score {
+    text-align: right; font-size: 0.85rem;
+}
+.rank-item-name {
+    flex: 1;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+input,textarea,button {
+    border: 1px solid #2D2747;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 7px;
+    height: 30px;
+    background-color: rgba(0,0,0,0);
+}
+.ui-widget-content {
+    border: 1px solid #ddd;
+    background: rgba(255,255,255, 0.85);
+    color: black;
+    font-weight: normal;
+    font-size: 0.75rem;
+}
+.ui-selectmenu-button.ui-button {
+    width: 8em;
+    height: 2rem;
+}
+button,input[type=submit] {
+    cursor: pointer;
+}
+input:hover {
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.card-comments textarea {
+    width: 90%;
+    height: 4rem;
+    min-height: 3rem;
+    max-width: 90%;
+    min-width: 90%;
+}
+.message {
+    border-bottom: 1px solid #C400D7;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+input:focus{
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.pagination {
+    list-style-type: none;
+    padding: 0;
+}
+.pagination li {
+    display: inline-block;
+    margin: 0 5px 0;
+}
+.pagination .active {
+    font-weight: bold ;
+}
+.account-link {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+.form-style {
+    text-align: center;
+}
+.form-style input {
+    margin: 5px;
+}
+.comment-rating-1{
+    color: red;
+    min-width: 1.2rem;
+
+    border-radius: 5px;
+    padding: 1px 4px;
+    background-color: rgba(0,0,0,0.65);
+}
+.comment-rating-2{
+    color: lightcoral;
+    min-width: 1.2rem;
+
+    border-radius: 5px;
+    padding: 1px 4px;
+    background-color: rgba(0,0,0,0.65);
+}
+.comment-rating-3{
+    color: orange;
+    min-width: 1.2rem;
+    border-radius: 5px;
+    padding: 1px 4px;
+    background-color: rgba(0,0,0,0.65);
+}
+.comment-rating-4{
+    color: lightgreen;
+    min-width: 1.2rem;
+
+    border-radius: 5px;
+    padding: 1px 4px;
+    background-color: rgba(0,0,0,0.65);
+}
+.comment-rating-5{
+    color: lawngreen;
+    min-width: 1.2rem;
+
+    border-radius: 5px;
+    padding: 1px 4px;
+    background-color: rgba(0,0,0,0.65);
+}
+.comment-rate > * {
+    display:inline-block;
+
+}
+.comment-rate {
+    text-align: center;
+    display:inline-block;
+    padding: 1px;
+}
+
+.comment-author::before{
+    content: ''
+}
+.comment-author {
+    display:inline-block;
+    text-align: left;
+}
+.comment-author::after{
+    content: ''
+}
+.comment-text {
+}
+.comment-datetime {
+    font-style: italic;
+    font-size: 0.70rem;
+    text-align: right;
+}
+.ui-widget-header {
+    border: 0px solid #ddd;
+    background: inherit;
+    color: inherit;
+    font-weight: bold;
+}
+.rating-option {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.rating-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.rating-option:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.rating-option input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.rating-option input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.rating-option .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: white;
+}
+
+.left-vertical {
+    text-align: left;
+}
+.left-vertical > * {
+    vertical-align: middle;
+}
+
+.ui-tooltip {
+    padding: 5px;
+    border: 0 solid black;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #B3B8CD;
+    background-color: rgba(255,255,255,0.75);
+    color: black;
+    font-size: 0.85rem;
+}
+.ui-widget.ui-widget-content {
+    border: 0px solid #c5c5c5;
+}
+.channel-rating {
+    position: relative;
+    height: 9px;
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.channel-description {
+    padding: 0 1em;
+}
+.rating-slider{
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 7px;
+    width: 0%;
+    border-radius: 0px;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 100%);
+}
+.table-statistics {
+    text-align: left;
+}
+.table-statistics td {
+    padding-right: 20px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: transparent;
+    color: black;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 7px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid rgba(0,0,0,0.5);
+    background: inherit;
+    color: rgba(0,0,0,0.75);
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    border: 1px solid rgba(0,0,0,0.5);
+    background: transparent;
+    color: inherit;
+}
+.hidden{
+    display:none;
+}
+button[data-for="additional-ratings"]{
+}
+.content-tags > img {
+    width: 32px;
+}
